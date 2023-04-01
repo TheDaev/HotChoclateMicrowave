@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Window">
+      <UniqueIdentifier>{ac96ea11-1b81-4558-9c14-b119188e2bad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity">
+      <UniqueIdentifier>{90f7c1cd-7ac8-412c-bb11-7c4e42edae96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EventListener">
+      <UniqueIdentifier>{d54ae0b3-b1f1-4d09-8595-1806ab5d0150}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Window.cpp">
+      <Filter>Window</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="glad.c">
+      <Filter>Window</Filter>
+    </ClCompile>
+    <ClCompile Include="MouseListener.cpp">
+      <Filter>EventListener</Filter>
+    </ClCompile>
+    <ClCompile Include="KeyListener.cpp">
+      <Filter>EventListener</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Window.h">
+      <Filter>Window</Filter>
+    </ClInclude>
+    <ClInclude Include="MouseListener.h">
+      <Filter>EventListener</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyListener.h">
+      <Filter>EventListener</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
