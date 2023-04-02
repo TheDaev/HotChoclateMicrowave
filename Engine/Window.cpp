@@ -8,6 +8,11 @@ Window::Window() {
 	title = "Window";
 }
 
+/*
+My first commit!
+by dave
+*/
+
 void Window::run() {
 	init();
 	loop();
