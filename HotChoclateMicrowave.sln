@@ -5,6 +5,8 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Engine", "Engine\Engine.vcxproj", "{22F2AF2F-DFDC-4129-856D-709787F743D0}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "microwave", "M.I.C.R.O.W.A.V.E\microwave.csproj", "{869AD310-C3B4-4187-97F5-B663E5877DF9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,18 @@ Global
 		{22F2AF2F-DFDC-4129-856D-709787F743D0}.Release|x64.Build.0 = Release|x64
 		{22F2AF2F-DFDC-4129-856D-709787F743D0}.Release|x86.ActiveCfg = Release|Win32
 		{22F2AF2F-DFDC-4129-856D-709787F743D0}.Release|x86.Build.0 = Release|Win32
+		{869AD310-C3B4-4187-97F5-B663E5877DF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{869AD310-C3B4-4187-97F5-B663E5877DF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{869AD310-C3B4-4187-97F5-B663E5877DF9}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{869AD310-C3B4-4187-97F5-B663E5877DF9}.Debug|x64.Build.0 = Debug|Any CPU
+		{869AD310-C3B4-4187-97F5-B663E5877DF9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{869AD310-C3B4-4187-97F5-B663E5877DF9}.Debug|x86.Build.0 = Debug|Any CPU
+		{869AD310-C3B4-4187-97F5-B663E5877DF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{869AD310-C3B4-4187-97F5-B663E5877DF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{869AD310-C3B4-4187-97F5-B663E5877DF9}.Release|x64.ActiveCfg = Release|Any CPU
+		{869AD310-C3B4-4187-97F5-B663E5877DF9}.Release|x64.Build.0 = Release|Any CPU
+		{869AD310-C3B4-4187-97F5-B663E5877DF9}.Release|x86.ActiveCfg = Release|Any CPU
+		{869AD310-C3B4-4187-97F5-B663E5877DF9}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
