@@ -13,35 +13,6 @@ Window::Window() {
 	title = "Window";
 }
 
-Window* Window::get()
-{
-	
-	if (instance == NULL) {
-		instance = new Window();
-	}
-
-	return instance;
-	
-}
-
-//void Window::cangeScene(int newScene)
-//{
-//	switch (newScene)
-//	{
-//	case 1:
-//		currentScene = new LevelEditorScene();
-//		currentScene->init();
-//		break;
-//	case 2:
-//		currentScene = new LevelScene();
-//		currentScene->init();
-//		break;
-//	default:
-//		std::cout << "Unknown Scene. " << std::endl;
-//		break;
-//	}
-//}
-
 void Window::run() {
 	init();
 	loop();
