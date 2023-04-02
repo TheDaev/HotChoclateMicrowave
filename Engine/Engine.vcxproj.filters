@@ -36,6 +36,7 @@
     <ClCompile Include="Scene.cpp">
       <Filter>SceneManager</Filter>
     </ClCompile>
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Window.h">
