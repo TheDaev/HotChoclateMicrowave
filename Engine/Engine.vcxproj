@@ -40,7 +40,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -133,13 +133,18 @@
   <ItemGroup>
     <ClCompile Include="glad.c" />
     <ClCompile Include="KeyListener.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="LevelScene.cpp" />
+    <ClCompile Include="LevelSceneEditor.cpp" />
     <ClCompile Include="MouseListener.cpp" />
+    <ClCompile Include="Scene.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="KeyListener.h" />
+    <ClInclude Include="LevelScene.h" />
+    <ClInclude Include="LevelSceneEditor.h" />
     <ClInclude Include="MouseListener.h" />
+    <ClInclude Include="Scene.h" />
     <ClInclude Include="Window.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

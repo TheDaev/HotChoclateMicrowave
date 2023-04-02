@@ -1,12 +1,46 @@
 #include "Window.h"
+
+
 #include "MouseListener.h"
 #include "KeyListener.h"
+#include "LevelScene.h"
+#include "LevelSceneEditor.h"
+
 
 Window::Window() {
 	width = 900;
 	height = 450;
 	title = "Window";
 }
+
+Window* Window::get()
+{
+	
+	if (instance == NULL) {
+		instance = new Window();
+	}
+
+	return instance;
+	
+}
+
+//void Window::cangeScene(int newScene)
+//{
+//	switch (newScene)
+//	{
+//	case 1:
+//		currentScene = new LevelEditorScene();
+//		currentScene->init();
+//		break;
+//	case 2:
+//		currentScene = new LevelScene();
+//		currentScene->init();
+//		break;
+//	default:
+//		std::cout << "Unknown Scene. " << std::endl;
+//		break;
+//	}
+//}
 
 void Window::run() {
 	init();
@@ -16,9 +50,7 @@ void Window::run() {
 	delete MouseListener::get();
 	delete KeyListener::get();
 
-	glfwDestroyWindow(glfwWindow);
 	glfwTerminate();
-	delete this;
 }
 
 void Window::init() {
@@ -51,9 +83,39 @@ void Window::init() {
 	//Make the window visible
 	glfwShowWindow(glfwWindow);
 
+	//cangeScene(1);
+
 }
 
 void Window::loop() {
+
+	//Check for event listener status
+	bool is_key_listener_okay;
+	bool is_mouse_listener_okay;
+
+	for (int i = 0; i <= 356; i++) {
+		if (KeyListener::get()->keyPressed[i] == false) {
+			is_key_listener_okay = true;
+		}
+		else {
+			is_key_listener_okay = false;
+		}
+	}
+
+	for (int i = 0; i <= 3; i++) {
+		if (MouseListener::get()->mouseButtonPressed[i] == false) {
+			is_mouse_listener_okay = true;
+		}
+		else {
+			is_mouse_listener_okay = false;
+		}
+
+	}
+
+	std::cout << "Key Listener Status: " << is_key_listener_okay << std::endl;
+	std::cout << "Mouse Listener Status: " << is_mouse_listener_okay << std::endl;
+
+
 	while (!glfwWindowShouldClose(glfwWindow)) {
 		glfwPollEvents();
 
@@ -61,15 +123,8 @@ void Window::loop() {
 		glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 		
-		//idk whats wrong wit this
 
-		/*if (KeyListener::isKeyPressed(GLFW_KEY_ESCAPE)) {
-			static auto _ = [this]() {
-				glfwDestroyWindow(glfwWindow);
-				return true;
-			}();
-			return;
-		}*/
+			
 
 		glfwSwapBuffers(glfwWindow);
 	}

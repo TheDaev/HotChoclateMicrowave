@@ -1,5 +1,5 @@
 #include "MouseListener.h"
-#include <iostream>
+
 
 MouseListener* MouseListener::get()
 {
@@ -93,4 +93,7 @@ bool MouseListener::mouseButtonDown(int button)
 
 MouseListener::MouseListener() {
 	scrollX, scrollY, xPos, yPos, lastX, lastY = 0, 0, 0, 0, 0, 0;
+	for (int i = 0; i < 3; i++) {
+		mouseButtonPressed[i] = false;
+	}
 }

@@ -1,5 +1,4 @@
 #include "KeyListener.h"
-#include<GLFW/glfw3.h>
 
 KeyListener* KeyListener::get()
 {
@@ -11,7 +10,9 @@ KeyListener* KeyListener::get()
 }
 
 KeyListener::KeyListener() {
-
+	for (int i = 0; i < 356; i++) {
+		keyPressed[i] = false;
+	}
 }
 
 void KeyListener::key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)

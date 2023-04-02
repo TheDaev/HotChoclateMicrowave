@@ -10,12 +10,14 @@
     <Filter Include="EventListener">
       <UniqueIdentifier>{d54ae0b3-b1f1-4d09-8595-1806ab5d0150}</UniqueIdentifier>
     </Filter>
+    <Filter Include="SceneManager">
+      <UniqueIdentifier>{93df21a4-d8cb-4042-a8ce-8247bd8dac81}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Window.cpp">
       <Filter>Window</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp" />
     <ClCompile Include="glad.c">
       <Filter>Window</Filter>
     </ClCompile>
@@ -24,6 +26,15 @@
     </ClCompile>
     <ClCompile Include="KeyListener.cpp">
       <Filter>EventListener</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelScene.cpp">
+      <Filter>SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelSceneEditor.cpp">
+      <Filter>SceneManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>SceneManager</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -35,6 +46,15 @@
     </ClInclude>
     <ClInclude Include="KeyListener.h">
       <Filter>EventListener</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelScene.h">
+      <Filter>SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelSceneEditor.h">
+      <Filter>SceneManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>SceneManager</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

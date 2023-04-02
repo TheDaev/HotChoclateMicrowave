@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 
 #include <GLFW/glfw3.h>
 
@@ -18,10 +19,10 @@ public:
 	static bool isDragging();
 	static bool mouseButtonDown(int button);
 
+	bool mouseButtonPressed[3];
 private:
 	static inline MouseListener* instance = NULL;
 	double xPos, yPos, lastX, lastY, scrollX, scrollY;
-	bool mouseButtonPressed[3];
 	bool isdragging;
 
 	MouseListener();
