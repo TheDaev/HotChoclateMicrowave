@@ -13,6 +13,8 @@ Window::Window() {
 	title = "Window";
 }
 
+
+
 void Window::run() {
 	init();
 	loop();
