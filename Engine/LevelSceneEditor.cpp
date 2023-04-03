@@ -10,7 +10,9 @@
 
 void LevelEditorScene::update(float dt)
 {
-	
+	if (KeyListener::isKeyPressed(GLFW_KEY_A)) {
+		std::cout << "fuck";
+	}
 }
 
 void LevelEditorScene::init()

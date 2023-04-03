@@ -3,7 +3,7 @@
 
 class Scene {
 public:
-	void update(float dt);
-	void init();
+	virtual void update(float dt) = 0;
+	virtual void init() = 0;
 	Scene();
 };

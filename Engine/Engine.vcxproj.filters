@@ -33,10 +33,10 @@
     <ClCompile Include="LevelSceneEditor.cpp">
       <Filter>SceneManager</Filter>
     </ClCompile>
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="Scene.cpp">
       <Filter>SceneManager</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Window.h">
