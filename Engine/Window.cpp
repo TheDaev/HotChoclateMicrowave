@@ -11,6 +11,30 @@ Window::Window() {
 	width = 900;
 	height = 450;
 	title = "Window";
+	r, g, b = 1.0f;
+}
+
+Window* Window::get()
+{
+	if (instance == NULL) {
+		instance = new Window();
+	}
+	return instance;
+}
+
+void Window::cangeScene(int newScene)
+{
+	switch (newScene) {
+	case 0:
+		get()->currentScene = new LevelEditorScene();
+		break;
+	case 1:
+		get()->currentScene = new LevelScene();
+		break;
+	default:
+		std::cout << "No such scene. scene " << newScene << ". " << std::endl;
+		break;
+	}
 }
 
 void Window::run() {
@@ -55,7 +79,7 @@ void Window::init() {
 	glfwShowWindow(glfwWindow);
 
 	//cangeScene(1);
-
+	cangeScene(0);
 }
 
 void Window::loop() {
@@ -86,6 +110,7 @@ void Window::loop() {
 	std::cout << "Key Listener Status: " << is_key_listener_okay << std::endl;
 	std::cout << "Mouse Listener Status: " << is_mouse_listener_okay << std::endl;
 
+	
 
 	while (!glfwWindowShouldClose(glfwWindow)) {
 		glfwPollEvents();

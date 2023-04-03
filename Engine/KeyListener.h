@@ -3,6 +3,10 @@
 
 #include <GLFW/glfw3.h>
 
+#define key_A GLFW_KEY_A
+#define key_B GLFW_KEY_B
+
+
 class KeyListener {
 public:
 	static KeyListener* get();

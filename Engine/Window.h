@@ -9,12 +9,14 @@ public:
 	static Window* get();
 	static void cangeScene(int newScene);
 	void run();
+
+	float r, g, b;
 private:
 	void init();
 	void loop();
 
 	//Member
-	static Scene* currentScene;
+	Scene* currentScene;
 	int width, height;
 	const char* title;
 	GLFWwindow* glfwWindow;
