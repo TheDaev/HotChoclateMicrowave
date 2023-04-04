@@ -1,5 +1,6 @@
 #include "ImportFromJava.h"
 
+/*
 static int64_t hpms_nano() {
     static LARGE_INTEGER ticksPerSecond;
     if (ticksPerSecond.QuadPart == 0) {
@@ -11,3 +12,5 @@ static int64_t hpms_nano() {
     nano *= 100UL;
     return nano;
 }
+
+*/
