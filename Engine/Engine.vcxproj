@@ -142,6 +142,8 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MouseListener.cpp" />
     <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="ifj.cpp" />
+    <ClCompile Include="Time.cpp" />
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -149,8 +151,17 @@
     <ClInclude Include="LevelScene.h" />
     <ClInclude Include="LevelSceneEditor.h" />
     <ClInclude Include="MouseListener.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="Scene.h" />
+    <ClInclude Include="ifj.h" />
+    <ClInclude Include="Time.h" />
     <ClInclude Include="Window.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Engine.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="default.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

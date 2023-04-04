@@ -5,6 +5,7 @@
 #include "KeyListener.h"
 #include "LevelScene.h"
 #include "LevelSceneEditor.h"
+#include "Time.h"
 
 
 Window::Window() {
@@ -27,9 +28,11 @@ void Window::cangeScene(int newScene)
 	switch (newScene) {
 	case 0:
 		get()->currentScene = new LevelEditorScene();
+		get()->currentScene->init();
 		break;
 	case 1:
 		get()->currentScene = new LevelScene();
+		get()->currentScene->init();
 		break;
 	default:
 		std::cout << "No such scene. scene " << newScene << ". " << std::endl;
@@ -84,6 +87,10 @@ void Window::init() {
 
 void Window::loop() {
 
+	float endTime = Time::getTime();
+	float beginTime = Time::getTime();
+	float dt = -1.0f;
+
 	//Check for event listener status
 	bool is_key_listener_okay;
 	bool is_mouse_listener_okay;
@@ -119,10 +126,16 @@ void Window::loop() {
 		glClearColor(r,g,b, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT);
 		
-
+		if (dt > 0) {
+			currentScene->update(dt);
+		}
 			
 
 		glfwSwapBuffers(glfwWindow);
+
+		endTime = Time::getTime();
+		dt = endTime - beginTime;
+		beginTime = endTime;
 	}
 
 	glfwDestroyWindow(glfwWindow);

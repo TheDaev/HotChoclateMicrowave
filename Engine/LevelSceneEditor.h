@@ -1,6 +1,8 @@
 #pragma once
 
 #include "Scene.h"
+#include <string>
+
 
 class LevelEditorScene : public Scene {
 public:

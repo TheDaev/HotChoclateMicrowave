@@ -4,14 +4,20 @@
     <Filter Include="Window">
       <UniqueIdentifier>{ac96ea11-1b81-4558-9c14-b119188e2bad}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Entity">
-      <UniqueIdentifier>{90f7c1cd-7ac8-412c-bb11-7c4e42edae96}</UniqueIdentifier>
-    </Filter>
     <Filter Include="EventListener">
       <UniqueIdentifier>{d54ae0b3-b1f1-4d09-8595-1806ab5d0150}</UniqueIdentifier>
     </Filter>
     <Filter Include="SceneManager">
       <UniqueIdentifier>{93df21a4-d8cb-4042-a8ce-8247bd8dac81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{d42e622c-c938-4020-9570-7275cab3577d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>{52542db1-28d1-43ad-8355-2e6ec4301129}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets\Shaders">
+      <UniqueIdentifier>{1f63ae81-0bd0-4d92-b8b7-a05b3cd93d35}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -33,10 +39,16 @@
     <ClCompile Include="LevelSceneEditor.cpp">
       <Filter>SceneManager</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp" />
     <ClCompile Include="Scene.cpp">
       <Filter>SceneManager</Filter>
     </ClCompile>
+    <ClCompile Include="ifj.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="Time.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Window.h">
@@ -57,5 +69,20 @@
     <ClInclude Include="Scene.h">
       <Filter>SceneManager</Filter>
     </ClInclude>
+    <ClInclude Include="ifj.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="Time.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Engine.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="default.glsl">
+      <Filter>Assets\Shaders</Filter>
+    </None>
   </ItemGroup>
 </Project>
