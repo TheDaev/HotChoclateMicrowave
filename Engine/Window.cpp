@@ -1,12 +1,10 @@
 #include "Window.h"
-
-
 #include "MouseListener.h"
 #include "KeyListener.h"
 #include "LevelScene.h"
 #include "LevelSceneEditor.h"
 #include "Time.h"
-
+#include <glad/glad.h>
 
 Window::Window() {
 	width = 900;
@@ -57,6 +55,7 @@ void Window::init() {
 		std::cout << "Failed to initialized glfw" << std::endl;
 	}
 
+
 	//Configure glfw
 	glfwDefaultWindowHints();
 	glfwWindowHint(GLFW_VISIBLE, GLFW_FALSE);
@@ -77,6 +76,11 @@ void Window::init() {
 	//Make open gl context current
 	glfwMakeContextCurrent(glfwWindow);
 	glfwSwapInterval(1);
+
+
+	if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress)) {
+		std::cout << "Failed to initialize OpenGL context" << std::endl;
+	}
 
 	//Make the window visible
 	glfwShowWindow(glfwWindow);
@@ -117,7 +121,7 @@ void Window::loop() {
 	std::cout << "Key Listener Status: " << is_key_listener_okay << std::endl;
 	std::cout << "Mouse Listener Status: " << is_mouse_listener_okay << std::endl;
 
-	
+	bool isDebugging = false;
 
 	while (!glfwWindowShouldClose(glfwWindow)) {
 		glfwPollEvents();
@@ -128,6 +132,7 @@ void Window::loop() {
 		
 		if (dt > 0) {
 			currentScene->update(dt);
+			
 		}
 			
 
