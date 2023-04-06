@@ -9,4 +9,6 @@ public:
 	void update(float dt);
 	void init();
 	LevelEditorScene();
+private:
+	unsigned int buffer;
 };
